@@ -83,11 +83,17 @@ DESCRIPTIONS = {
     ),
     "photos/plate-V.jpg": (
         "Plate V · Orchid. A soft pool resting on orchid-coloured paper, "
-        "photographed in available daylight — the closing plate of the "
-        "current cycle. Pigment giclée on Hahnemühle Photo Rag Baryta, "
-        "315 gsm. 70 × 47 cm. Hand-numbered, signed in graphite, shipped "
-        "flat with a letterpress certificate of authenticity. Edition of "
-        "7 + 2 AP."
+        "photographed in available daylight. Pigment giclée on Hahnemühle "
+        "Photo Rag Baryta, 315 gsm. 70 × 47 cm. Hand-numbered, signed in "
+        "graphite, shipped flat with a letterpress certificate of "
+        "authenticity. Edition of 7 + 2 AP."
+    ),
+    "photos/plate-VI.jpg": (
+        "Plate VI · Vermilion. A study in saturated red — the deepest "
+        "ground in the cycle, and the loudest. Pigment giclée on "
+        "Hahnemühle Photo Rag Baryta, 315 gsm. 70 × 47 cm. Hand-numbered, "
+        "signed in graphite, shipped flat with a letterpress certificate "
+        "of authenticity. Edition of 7 + 2 AP."
     ),
 }
 

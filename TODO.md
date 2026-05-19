@@ -24,11 +24,16 @@ roughly by impact / risk.
       (Mint) are now in `<section id="prints">` alongside II, III, V. All
       five carry `data-plate`/`data-img`/`data-price`/`data-remaining`
       attrs and matching entries in `DESCRIPTIONS` in `stripe_sync.py`.
-- [x] **Run `stripe_sync.py`** — all five plates synced, each `<article
-      class="ed">` carries a `data-stripe-url`, and the inline Acquire
+- [x] **Run `stripe_sync.py`** — Plates I–V are live (each `<article
+      class="ed">` carries `data-stripe-url`), and the inline Acquire
       buttons are rewritten on page load to point at Stripe. The modal
       Acquire button reads the same source and falls back to a mailto
       enquiry if `data-stripe-url` is missing.
+- [ ] **Re-run `stripe_sync.py` for Plate VI** — Plate VI · Vermilion has
+      `DESCRIPTIONS` entry and a full `<article data-*>` in the prints
+      section, but no `data-stripe-url` yet. Running sync (in live mode)
+      will upload the image, create the Product + Price + Payment Link,
+      and write `data-stripe-url` back into `index.html`.
 
 ## 1. Legal — required for B2C sales from Germany
 

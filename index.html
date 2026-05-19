@@ -20,6 +20,7 @@
     --coral:     #f0a07a;
     --mint:      #b9d9c4;
     --orchid:    #e1a1e8;
+    --vermilion: #d12a35;
 
     --ink:      #0a0a0a;
     --paper:    #ededea;
@@ -90,6 +91,7 @@
   .ticker .stream b.coral { color: var(--coral); }
   .ticker .stream b.mint  { color: var(--mint); }
   .ticker .stream b.orch  { color: var(--orchid); }
+  .ticker .stream b.verm  { color: var(--vermilion); }
   .ticker .stream em {
     font-family: 'Newsreader', serif;
     font-weight: 300;
@@ -270,7 +272,7 @@
   /* index strip below hero type */
   .hero-strip {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     border-bottom: 2px solid var(--ink);
   }
   .hero-strip .cell {
@@ -317,6 +319,7 @@
   .hero-strip .cell:nth-child(3) .swatch { background: var(--coral); }
   .hero-strip .cell:nth-child(4) .swatch { background: var(--mint); }
   .hero-strip .cell:nth-child(5) .swatch { background: var(--orchid); }
+  .hero-strip .cell:nth-child(6) .swatch { background: var(--vermilion); }
 
   /* hero feature row — big image + sidecar info */
   .hero-feat {
@@ -605,6 +608,9 @@
   .w5 { grid-column: 9 / span 4; }
   .w5 .swatch-tag { background: var(--orchid); }
   .w5 .img { aspect-ratio: 3/4; }
+  .w6 { grid-column: 1 / -1; }
+  .w6 .swatch-tag { background: var(--vermilion); }
+  .w6 .img { aspect-ratio: 5/2; }
 
   /* ============== STATEMENT BLOCK ============== */
   .statement {
@@ -1139,9 +1145,9 @@
     .hero-type .corner-tag { font-size: 10px; padding: 6px 10px; }
 
     .hero-strip { grid-template-columns: 1fr 1fr; }
-    .hero-strip .cell { border-bottom: 1px solid var(--ink); }
+    .hero-strip .cell { border-bottom: 1px solid var(--ink); border-right: 0; }
     .hero-strip .cell:nth-child(odd) { border-right: 1px solid var(--ink); }
-    .hero-strip .cell:nth-child(even) { border-right: 0; }
+    .hero-strip .cell:last-child { border-bottom: 0; }
 
     .hero-feat { grid-template-columns: 1fr; }
     .hero-feat .img-wrap { border-right: 0; border-bottom: 2px solid var(--ink); }
@@ -1153,7 +1159,7 @@
     .sec-head .meta { display: none; }
 
     .work { grid-template-columns: 1fr; }
-    .w1, .w2, .w3, .w4, .w5 { grid-column: 1 / -1; }
+    .w1, .w2, .w3, .w4, .w5, .w6 { grid-column: 1 / -1; }
     .work .card { border-right: 0; }
 
     .statement { grid-template-columns: 1fr; }
@@ -1411,13 +1417,13 @@
 <div class="ticker" aria-hidden="true">
   <div class="stream">
     <span><b class="lemon">●</b>&nbsp;CURRENT VOLUME <em>—</em> BODYFLUID, VOL. I</span><span class="ticker-sep"></span>
-    <span>FIVE PAPERS <em>·</em> ONE ROOM <em>·</em> ONE BODY</span><span class="ticker-sep"></span>
-    <span>NEW PLATE <em>—</em> <b class="peri">PERIWINKLE</b>, P—I</span><span class="ticker-sep"></span>
+    <span>SIX PAPERS <em>·</em> ONE ROOM <em>·</em> ONE BODY</span><span class="ticker-sep"></span>
+    <span>NEW PLATE <em>—</em> <b class="verm">VERMILION</b>, P—VI</span><span class="ticker-sep"></span>
     <span>STUDIO <em>·</em> NEUKÖLLN, BERLIN <em>·</em> BY APPOINTMENT</span><span class="ticker-sep"></span>
     <span>EDITIONS OF SEVEN <em>+</em> TWO ARTIST PROOFS</span><span class="ticker-sep"></span>
     <span><b class="coral">●</b>&nbsp;CURRENT VOLUME <em>—</em> BODYFLUID, VOL. I</span><span class="ticker-sep"></span>
-    <span>FIVE PAPERS <em>·</em> ONE ROOM <em>·</em> ONE BODY</span><span class="ticker-sep"></span>
-    <span>NEW PLATE <em>—</em> <b class="orch">PERIWINKLE</b>, P—I</span><span class="ticker-sep"></span>
+    <span>SIX PAPERS <em>·</em> ONE ROOM <em>·</em> ONE BODY</span><span class="ticker-sep"></span>
+    <span>NEW PLATE <em>—</em> <b class="verm">VERMILION</b>, P—VI</span><span class="ticker-sep"></span>
     <span>STUDIO <em>·</em> NEUKÖLLN, BERLIN <em>·</em> BY APPOINTMENT</span><span class="ticker-sep"></span>
     <span>EDITIONS OF SEVEN <em>+</em> TWO ARTIST PROOFS</span><span class="ticker-sep"></span>
   </div>
@@ -1481,6 +1487,12 @@
       <span class="nm">Orchid</span>
       <span class="meta">Ed. 7 + 2 AP</span>
     </div>
+    <div class="cell">
+      <span class="swatch"></span>
+      <span class="num">N° 06</span>
+      <span class="nm">Vermilion</span>
+      <span class="meta">Ed. 7 + 2 AP</span>
+    </div>
   </div>
 
   <div class="hero-feat">
@@ -1511,11 +1523,11 @@
 <div class="sec-head">
   <div class="num">i.<em>/work</em></div>
   <div class="title">Selected <em>plates</em> &amp; <span class="pop peri">recent</span> studies.</div>
-  <div class="meta">Vol. I · 5 plates<br>Five papers · MMXXVI</div>
+  <div class="meta">Vol. I · 6 plates<br>Six papers · MMXXVI</div>
 </div>
 
 <section id="work" class="work">
-  <article class="card w1" data-plate="I">
+  <article class="card w1" data-plate="I" data-stripe-url="https://buy.stripe.com/cNibJ16b18Oh3ru3zg4AU1L">
     <div class="img">
       <span class="corner">P—I</span>
       <span class="swatch-tag"></span>
@@ -1531,7 +1543,7 @@
     </div>
   </article>
 
-  <article class="card w2" data-plate="II">
+  <article class="card w2" data-plate="II" data-stripe-url="https://buy.stripe.com/00w5kD8j9ggJ0fifhY4AU1M">
     <div class="img">
       <span class="corner">P—II</span>
       <span class="swatch-tag"></span>
@@ -1547,7 +1559,7 @@
     </div>
   </article>
 
-  <article class="card w3" data-plate="III">
+  <article class="card w3" data-plate="III" data-stripe-url="https://buy.stripe.com/aFafZhbvl5C5facc5M4AU1N">
     <div class="img">
       <span class="corner">P—III</span>
       <span class="swatch-tag"></span>
@@ -1563,7 +1575,7 @@
     </div>
   </article>
 
-  <article class="card w4" data-plate="IV">
+  <article class="card w4" data-plate="IV" data-stripe-url="https://buy.stripe.com/bJedR9fLBc0t9PS2vc4AU1O">
     <div class="img">
       <span class="corner">P—IV</span>
       <span class="swatch-tag"></span>
@@ -1579,7 +1591,7 @@
     </div>
   </article>
 
-  <article class="card w5" data-plate="V">
+  <article class="card w5" data-plate="V" data-stripe-url="https://buy.stripe.com/7sY28rarh5C5aTW4Dk4AU1P">
     <div class="img">
       <span class="corner">P—V</span>
       <span class="swatch-tag"></span>
@@ -1587,6 +1599,22 @@
     </div>
     <div class="info">
       <h3>Orchid<br><em>— soft pool</em></h3>
+      <span class="yr">'26</span>
+      <div class="meta">
+        <span>Hahnemühle Baryta · 70 × 47 cm</span>
+        <span class="stock">07 of 07</span>
+      </div>
+    </div>
+  </article>
+
+  <article class="card w6" data-plate="VI" data-stripe-url="https://buy.stripe.com/fZu3cvdDt3tX0fi8TA4AU1Q">
+    <div class="img">
+      <span class="corner">P—VI</span>
+      <span class="swatch-tag"></span>
+      <picture><source type="image/webp" srcset="photos-web/plate-VI.webp"><img src="photos-web/plate-VI.jpg" alt="Plate VI" width="1500" height="999" decoding="async" loading="lazy"></picture>
+    </div>
+    <div class="info">
+      <h3>Vermilion<br><em>— red ground</em></h3>
       <span class="yr">'26</span>
       <div class="meta">
         <span>Hahnemühle Baryta · 70 × 47 cm</span>
@@ -1607,18 +1635,19 @@
   <aside class="statement-side">
     <div>
       <div class="label">⎯ Working palette</div>
-      <h4>Five papers,<br><em>one</em> material.</h4>
+      <h4>Six papers,<br><em>one</em> material.</h4>
       <div class="palette-row">
         <span style="background:var(--periwinkle)"></span>
         <span style="background:var(--lemon)"></span>
         <span style="background:var(--coral)"></span>
         <span style="background:var(--mint)"></span>
         <span style="background:var(--orchid)"></span>
+        <span style="background:var(--vermilion)"></span>
       </div>
     </div>
     <div>
       <div class="label">⎯ Volume</div>
-      <h4>I / 5 plates,<br><em>spring</em> MMXXVI.</h4>
+      <h4>I / 6 plates,<br><em>spring</em> MMXXVI.</h4>
     </div>
   </aside>
 </section>
@@ -1758,7 +1787,7 @@
            data-edition="7"
            data-remaining="7"
            data-price="900"
-           data-desc="Plate V · Orchid. A soft pool resting on orchid-coloured paper — the closing plate of the cycle. Pigment giclée on Hahnemühle Photo Rag Baryta, 315 gsm. 70 × 47 cm. Edition of 7 + 2 AP." data-stripe-url="https://buy.stripe.com/7sY28rarh5C5aTW4Dk4AU1P">
+           data-desc="Plate V · Orchid. A soft pool resting on orchid-coloured paper, photographed in available daylight. Pigment giclée on Hahnemühle Photo Rag Baryta, 315 gsm. 70 × 47 cm. Edition of 7 + 2 AP." data-stripe-url="https://buy.stripe.com/7sY28rarh5C5aTW4Dk4AU1P">
     <div class="img">
       <span class="ed-tag">Ed. 7</span>
       <picture><source type="image/webp" srcset="photos-web/plate-V.webp"><img src="photos-web/plate-V.jpg" alt="Plate V" width="1500" height="999" decoding="async" loading="lazy"></picture>
@@ -1771,6 +1800,31 @@
     <div class="row">
       <span class="price">€900<small>EUR</small></span>
       <a href="mailto:hello@bodyfluid.art?subject=Plate%20V%20%E2%80%94%20Orchid" class="acquire">Acquire →</a>
+    </div>
+    <div class="vat">incl. VAT · shipping at checkout</div>
+  </article>
+
+  <article class="ed"
+           data-plate="VI"
+           data-title="Vermilion — red ground"
+           data-img="photos/plate-VI.jpg"
+           data-year="2026"
+           data-edition="7"
+           data-remaining="7"
+           data-price="900"
+           data-desc="Plate VI · Vermilion. A study in saturated red — the deepest ground in the cycle, and the loudest. Pigment giclée on Hahnemühle Photo Rag Baryta, 315 gsm. 70 × 47 cm. Edition of 7 + 2 AP." data-stripe-url="https://buy.stripe.com/fZu3cvdDt3tX0fi8TA4AU1Q">
+    <div class="img">
+      <span class="ed-tag">Ed. 7</span>
+      <picture><source type="image/webp" srcset="photos-web/plate-VI.webp"><img src="photos-web/plate-VI.jpg" alt="Plate VI" width="1500" height="999" decoding="async" loading="lazy"></picture>
+    </div>
+    <div class="info">
+      <h4>P—VI<br><em>Vermilion</em></h4>
+      <div class="specs">Hahnemühle Photo Rag Baryta · 70 × 47 cm</div>
+    </div>
+    <div class="stock"><span class="dot"></span>07 of 07 remain</div>
+    <div class="row">
+      <span class="price">€900<small>EUR</small></span>
+      <a href="mailto:hello@bodyfluid.art?subject=Plate%20VI%20%E2%80%94%20Vermilion" class="acquire">Acquire →</a>
     </div>
     <div class="vat">incl. VAT · shipping at checkout</div>
   </article>
@@ -1898,7 +1952,7 @@
 (function () {
   'use strict';
 
-  const COLORS = { I: 'Periwinkle', II: 'Lemon', III: 'Coral', IV: 'Mint', V: 'Orchid' };
+  const COLORS = { I: 'Periwinkle', II: 'Lemon', III: 'Coral', IV: 'Mint', V: 'Orchid', VI: 'Vermilion' };
 
   const modal = document.getElementById('plate-modal');
   const closeBtn = modal.querySelector('.modal-close');
