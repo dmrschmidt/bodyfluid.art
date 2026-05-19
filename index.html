@@ -1181,6 +1181,225 @@
     footer .right { text-align: center; }
     footer .center { font-size: 24px; }
   }
+
+  /* ============== PLATE MODAL ============== */
+  /* Cards become keyboard-activatable buttons. */
+  section#work article.card,
+  section#prints article.ed {
+    cursor: pointer;
+  }
+  section#work article.card:focus-visible,
+  section#prints article.ed:focus-visible {
+    outline: 3px solid var(--coral);
+    outline-offset: -3px;
+  }
+
+  .modal {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+  }
+  .modal[hidden] { display: none; }
+  .modal .modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(10,10,10,0.86);
+    opacity: 0;
+    transition: opacity 0.25s ease-out;
+  }
+  .modal.open .modal-backdrop { opacity: 1; }
+
+  .modal .modal-frame {
+    position: relative;
+    margin: auto;
+    width: min(1180px, 96vw);
+    max-height: 92vh;
+    background: var(--paper);
+    color: var(--ink);
+    border: 2px solid var(--ink);
+    box-shadow: 12px 12px 0 var(--ink);
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    overflow: hidden;
+    transform: translateY(20px) scale(0.98);
+    opacity: 0;
+    transition: transform 0.3s cubic-bezier(.7,0,.3,1), opacity 0.25s ease-out;
+  }
+  .modal.open .modal-frame { transform: none; opacity: 1; }
+
+  .modal .modal-close {
+    position: absolute;
+    top: 0; right: 0;
+    z-index: 5;
+    background: var(--ink);
+    color: var(--paper);
+    border: 0;
+    border-left: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    width: 52px; height: 52px;
+    cursor: pointer;
+    font-family: 'Archivo', sans-serif;
+    font-size: 28px;
+    line-height: 1;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, color 0.2s;
+  }
+  .modal .modal-close:hover { background: var(--coral); color: var(--ink); }
+
+  .modal .modal-image {
+    background: #ededea;
+    border-right: 2px solid var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    min-height: 40vh;
+  }
+  .modal .modal-image picture,
+  .modal .modal-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    max-height: 92vh;
+    background: #ededea;
+  }
+
+  .modal .modal-info {
+    padding: 28px 32px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    overflow-y: auto;
+    max-height: 92vh;
+  }
+  .modal .modal-eyebrow {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    color: var(--coral);
+  }
+  .modal h2 {
+    font-family: 'Archivo Black', sans-serif;
+    font-weight: 900;
+    font-size: clamp(40px, 5vw, 64px);
+    line-height: 0.9;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .modal .modal-specs {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: #2a2a28;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(10,10,10,0.18);
+  }
+  .modal .modal-desc {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.65;
+    color: #1c1c1a;
+  }
+  .modal .modal-bottom {
+    margin-top: auto;
+    padding-top: 14px;
+    border-top: 1px solid rgba(10,10,10,0.18);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .modal .modal-stock {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .modal .modal-stock .dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--coral);
+    display: inline-block;
+  }
+  .modal .modal-price-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 18px;
+  }
+  .modal .modal-price {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 36px;
+    letter-spacing: -0.02em;
+  }
+  .modal .modal-price small {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    margin-left: 6px;
+    color: var(--mute, #5a5a55);
+  }
+  .modal .modal-acquire {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 14px 22px;
+    font-family: 'Archivo', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+    border: 2px solid var(--ink);
+  }
+  .modal .modal-acquire:hover { background: var(--coral); color: var(--ink); }
+  .modal .modal-vat {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 12px;
+    color: #5a5a55;
+  }
+
+  @media (max-width: 900px) {
+    .modal .modal-frame {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr;
+      max-height: 96vh;
+      width: 96vw;
+      box-shadow: 6px 6px 0 var(--ink);
+    }
+    .modal .modal-image {
+      border-right: 0;
+      border-bottom: 2px solid var(--ink);
+      max-height: 50vh;
+    }
+    .modal .modal-info { padding: 22px 22px 20px; }
+    .modal h2 { font-size: 36px; }
+    .modal .modal-price { font-size: 28px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .modal .modal-frame, .modal .modal-backdrop { transition: none; }
+  }
 </style>
 </head>
 <body>
@@ -1296,7 +1515,7 @@
 </div>
 
 <section id="work" class="work">
-  <article class="card w1">
+  <article class="card w1" data-plate="I">
     <div class="img">
       <span class="corner">P—I</span>
       <span class="swatch-tag"></span>
@@ -1312,7 +1531,7 @@
     </div>
   </article>
 
-  <article class="card w2">
+  <article class="card w2" data-plate="II">
     <div class="img">
       <span class="corner">P—II</span>
       <span class="swatch-tag"></span>
@@ -1328,7 +1547,7 @@
     </div>
   </article>
 
-  <article class="card w3">
+  <article class="card w3" data-plate="III">
     <div class="img">
       <span class="corner">P—III</span>
       <span class="swatch-tag"></span>
@@ -1344,7 +1563,7 @@
     </div>
   </article>
 
-  <article class="card w4">
+  <article class="card w4" data-plate="IV">
     <div class="img">
       <span class="corner">P—IV</span>
       <span class="swatch-tag"></span>
@@ -1360,7 +1579,7 @@
     </div>
   </article>
 
-  <article class="card w5">
+  <article class="card w5" data-plate="V">
     <div class="img">
       <span class="corner">P—V</span>
       <span class="swatch-tag"></span>
@@ -1605,7 +1824,7 @@
   <div class="grid">
     <div class="col">
       <label>⎯ Studio</label>
-      <p>Neukölln<br>12047 Berlin, DE</p>
+      <p>Maybachufer 40<br>12047 Berlin, DE</p>
     </div>
     <div class="col">
       <label>⎯ Direct</label>
@@ -1621,6 +1840,7 @@
       <a href="withdrawal.html">Right of withdrawal</a>
       <a href="shipping.html">Shipping &amp; delivery</a>
       <a href="privacy.html">Privacy</a>
+      <a href="imprint.html">Imprint</a>
     </div>
   </div>
 </section>
@@ -1636,6 +1856,7 @@
     <a href="withdrawal.html">Withdrawal</a>
     <a href="shipping.html">Shipping</a>
     <a href="privacy.html">Privacy</a>
+    <a href="imprint.html">Imprint</a>
     <a href="https://ec.europa.eu/consumers/odr" rel="noopener noreferrer">EU ODR platform</a>
   </div>
   <div class="foot-row foot-fine">
@@ -1644,6 +1865,206 @@
     consumer arbitration board (§ 36 VSBG).
   </div>
 </footer>
+
+<!-- PLATE MODAL -->
+<div id="plate-modal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-backdrop" tabindex="-1"></div>
+  <div class="modal-frame" role="document">
+    <button type="button" class="modal-close" aria-label="Close">×</button>
+    <div class="modal-image">
+      <picture>
+        <source type="image/webp" srcset="" id="modal-webp">
+        <img id="modal-img" src="" alt="" width="1500" height="999" decoding="async">
+      </picture>
+    </div>
+    <div class="modal-info">
+      <div class="modal-eyebrow"><span id="modal-plate">Plate</span> · <span id="modal-year"></span></div>
+      <h2 id="modal-title"><span id="modal-name"></span></h2>
+      <div class="modal-specs" id="modal-specs"></div>
+      <div class="modal-desc" id="modal-desc"></div>
+      <div class="modal-bottom">
+        <div class="modal-stock"><span class="dot"></span><span id="modal-stock"></span></div>
+        <div class="modal-price-row">
+          <span class="modal-price" id="modal-price"></span>
+          <a id="modal-acquire" class="modal-acquire" href="#">Acquire&nbsp;→</a>
+        </div>
+        <div class="modal-vat">incl. VAT · shipping at checkout</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  const COLORS = { I: 'Periwinkle', II: 'Lemon', III: 'Coral', IV: 'Mint', V: 'Orchid' };
+
+  const modal = document.getElementById('plate-modal');
+  const closeBtn = modal.querySelector('.modal-close');
+  const backdrop = modal.querySelector('.modal-backdrop');
+  const f = {
+    img:    document.getElementById('modal-img'),
+    webp:   document.getElementById('modal-webp'),
+    plate:  document.getElementById('modal-plate'),
+    year:   document.getElementById('modal-year'),
+    name:   document.getElementById('modal-name'),
+    specs:  document.getElementById('modal-specs'),
+    desc:   document.getElementById('modal-desc'),
+    stock:  document.getElementById('modal-stock'),
+    price:  document.getElementById('modal-price'),
+    acquire: document.getElementById('modal-acquire'),
+  };
+  let lastFocused = null;
+
+  function fmtPrice(eur) {
+    const n = Number(eur) || 0;
+    return '€' + n.toLocaleString('en-US') + ' EUR';
+  }
+
+  function openFromArticle(article) {
+    if (!article) return;
+    const d = article.dataset;
+    const plate = d.plate || '';
+    const img = d.img || '';
+
+    // Use the optimised photos-web/ build for the modal too.
+    const jpgWeb = img.replace(/^photos\//, 'photos-web/');
+    const webpWeb = jpgWeb.replace(/\.jpg$/i, '.webp');
+    f.img.src = jpgWeb;
+    f.img.alt = d.title || ('Plate ' + plate);
+    f.webp.srcset = webpWeb;
+
+    f.plate.textContent = 'Plate ' + plate;
+    f.year.textContent = d.year || '';
+    f.name.textContent = COLORS[plate] || (d.title || '').split(' — ')[0] || '';
+
+    const specsEl = article.querySelector('.specs');
+    f.specs.textContent = specsEl ? specsEl.textContent : '';
+    f.desc.textContent = d.desc || '';
+
+    const rem = Number(d.remaining || 0);
+    const ed = Number(d.edition || 0);
+    f.stock.textContent = String(rem).padStart(2,'0') + ' of ' + String(ed).padStart(2,'0') + ' remain';
+
+    f.price.innerHTML = '€' + Number(d.price || 0).toLocaleString('en-US') + ' <small>EUR</small>';
+
+    const stripeUrl = d.stripeUrl || '';
+    if (stripeUrl) {
+      f.acquire.href = stripeUrl;
+      f.acquire.removeAttribute('rel');
+    } else {
+      const subj = encodeURIComponent('Plate ' + plate + ' — ' + (COLORS[plate] || ''));
+      f.acquire.href = 'mailto:hello@bodyfluid.art?subject=' + subj;
+    }
+
+    lastFocused = document.activeElement;
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+    // Trigger transition next frame.
+    requestAnimationFrame(() => modal.classList.add('open'));
+    // Focus close button so ESC and Tab work immediately.
+    setTimeout(() => closeBtn.focus(), 0);
+  }
+
+  function closeModal() {
+    if (modal.hidden) return;
+    modal.classList.remove('open');
+    // Wait out the fade before hiding so transition runs.
+    const finish = () => {
+      modal.hidden = true;
+      modal.removeEventListener('transitionend', finish);
+    };
+    modal.addEventListener('transitionend', finish);
+    // Safety: hide after 400ms even if transitionend doesn't fire.
+    setTimeout(finish, 400);
+    document.body.style.overflow = '';
+    if (lastFocused && typeof lastFocused.focus === 'function') {
+      lastFocused.focus();
+    }
+  }
+
+  function lookupPrintsArticle(plate) {
+    return document.querySelector('section#prints article.ed[data-plate="' + plate + '"]');
+  }
+
+  function bindCard(card, resolveArticle) {
+    card.setAttribute('role', 'button');
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('aria-haspopup', 'dialog');
+
+    const handler = (e) => {
+      // Let inline links inside the card (e.g. the visible Acquire) work.
+      if (e.target.closest('a, button')) return;
+      openFromArticle(resolveArticle(card));
+    };
+    card.addEventListener('click', handler);
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openFromArticle(resolveArticle(card));
+      }
+    });
+  }
+
+  // Prints cards open their own data.
+  document.querySelectorAll('section#prints article.ed').forEach((card) => {
+    bindCard(card, (c) => c);
+  });
+
+  // Work cards look up the matching prints article.
+  document.querySelectorAll('section#work article.card').forEach((card) => {
+    bindCard(card, (c) => lookupPrintsArticle(c.dataset.plate));
+  });
+
+  // Hero featured plate — open Plate I.
+  const heroImg = document.querySelector('.hero-feat .img-wrap');
+  if (heroImg) {
+    heroImg.style.cursor = 'pointer';
+    heroImg.setAttribute('role', 'button');
+    heroImg.setAttribute('tabindex', '0');
+    heroImg.setAttribute('aria-haspopup', 'dialog');
+    heroImg.setAttribute('aria-label', 'Open Plate I — Periwinkle');
+    const heroHandler = () => openFromArticle(lookupPrintsArticle('I'));
+    heroImg.addEventListener('click', heroHandler);
+    heroImg.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); heroHandler(); }
+    });
+  }
+
+  // Rewrite each inline visible Acquire button from data-stripe-url so
+  // the site works without JS modal interaction.
+  document.querySelectorAll('section#prints article.ed').forEach((article) => {
+    const url = article.dataset.stripeUrl;
+    if (!url) return;
+    const btn = article.querySelector('a.acquire');
+    if (btn) btn.setAttribute('href', url);
+  });
+
+  // Close handlers
+  closeBtn.addEventListener('click', closeModal);
+  backdrop.addEventListener('click', closeModal);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !modal.hidden) closeModal();
+  });
+
+  // Focus trap inside the dialog
+  modal.addEventListener('keydown', (e) => {
+    if (e.key !== 'Tab' || modal.hidden) return;
+    const focusables = modal.querySelectorAll(
+      'button:not([disabled]), a[href], [tabindex]:not([tabindex="-1"])'
+    );
+    if (!focusables.length) return;
+    const first = focusables[0];
+    const last  = focusables[focusables.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault(); last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault(); first.focus();
+    }
+  });
+})();
+</script>
 
 </body>
 </html>

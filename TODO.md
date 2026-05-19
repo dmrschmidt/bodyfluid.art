@@ -24,9 +24,11 @@ roughly by impact / risk.
       (Mint) are now in `<section id="prints">` alongside II, III, V. All
       five carry `data-plate`/`data-img`/`data-price`/`data-remaining`
       attrs and matching entries in `DESCRIPTIONS` in `stripe_sync.py`.
-- [ ] **Run `stripe_sync.py` in test mode** to verify the five products
-      upload and that `data-stripe-url` gets written back into
-      `index.html`. Then run in live mode when ready.
+- [x] **Run `stripe_sync.py`** — all five plates synced, each `<article
+      class="ed">` carries a `data-stripe-url`, and the inline Acquire
+      buttons are rewritten on page load to point at Stripe. The modal
+      Acquire button reads the same source and falls back to a mailto
+      enquiry if `data-stripe-url` is missing.
 
 ## 1. Legal — required for B2C sales from Germany
 
@@ -43,14 +45,12 @@ roughly by impact / risk.
 - [x] **Shipping & delivery page** — `shipping.html` lists carriers, lead
       times, insurance handling, and customs notes by region.
 - [x] **Privacy coverage** — `privacy.html` names the third parties actually
-      involved (Bunny Fonts, Stripe). Two placeholders remain: the **hoster**
-      under § 4, and the **controller name + imprint URL** under § 1 once
-      confirmed.
-- [ ] **Impressum.** German law (TMG § 5) requires a full Impressum with
-      operator name, postal address, contact, USt-IdNr. (if any). Currently
-      every legal page links to `https://dmrschmidt.de/imprint.html` for the
-      imprint; confirm this is acceptable for the Bodyfluid identity or host
-      a local `imprint.html`.
+      involved (Bunny Fonts, Stripe). Controller is now identified by name
+      and address in § 1. One placeholder remains: the **hoster** under § 4.
+- [x] **Impressum.** `imprint.html` is served locally with both English and
+      German sections under § 5 TMG (provider, responsibility, liability for
+      content / links, copyright, ODR). All four other legal pages and the
+      index footer link to it.
 - [ ] **Self-host CSS** — `index.html` ships ~24 KB of inline CSS, which is
       fine. But the four legal pages each embed the same chrome inline.
       Either accept the duplication (zero build, easy diffs) or factor a
@@ -63,16 +63,16 @@ roughly by impact / risk.
       animations, and short-circuits transitions.
 - [x] **Skip-to-content link** — keyboard-only `.skip-link` jumps to the
       work grid.
-- [ ] **Keyboard activation on plate cards** — the work cards and print
-      cards are currently `<article>` with no interactive role. The print
-      cards' `Acquire` link is keyboard-reachable, but the wider card is
-      not clickable for keyboard users. Add `role="button"`, `tabindex="0"`,
-      and Enter/Space handlers if cards are meant to be the activation
-      target.
-- [ ] **Modal a11y** — there is no real modal yet (the original mockup had
-      none). If a `<dialog>` for plate detail is added, wire `role="dialog"`,
-      `aria-modal="true"`, `aria-labelledby`, focus management, focus trap,
-      and ESC handler.
+- [x] **Keyboard activation on plate cards** — every plate card (work,
+      prints, and the hero feature) now has `role="button"`,
+      `tabindex="0"`, `aria-haspopup="dialog"`, and Enter/Space handlers
+      that open the plate modal. Inline `<a>` and `<button>` clicks inside
+      the card pass through (the visible Acquire goes straight to Stripe).
+- [x] **Modal a11y** — `#plate-modal` carries `role="dialog"`,
+      `aria-modal="true"`, `aria-labelledby="modal-title"`; focus moves to
+      the close button on open and returns to the triggering card on
+      close; Tab/Shift-Tab is trapped inside the dialog; ESC and
+      backdrop-click both close.
 - [ ] **Color contrast audit** — `--mute` (#5a5a55) on `--paper` (#ededea)
       and white-on-coral combinations on the index need a contrast check at
       small sizes.
