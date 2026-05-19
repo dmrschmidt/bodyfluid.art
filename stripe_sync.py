@@ -340,10 +340,16 @@ def parse_pieces(html: str) -> list[dict]:
 
 def inject_stripe_url(html: str, plate: str, url: str | None) -> str:
     """Insert, replace, or remove a data-stripe-url attribute on the
-    article tag for the given plate. Passing url=None strips it."""
+    prints article tag for the given plate. Passing url=None strips it.
+
+    Scoped to <article class="ed" …> only — the work-section <article
+    class="card w…"> tags also carry data-plate (for the modal lookup),
+    but they should never carry a Stripe URL of their own."""
     def repl(m: re.Match) -> str:
         tag = m.group(0)
         if 'data-plate="' + plate + '"' not in tag:
+            return tag
+        if 'class="ed"' not in tag:
             return tag
         if url is None:
             return re.sub(r'\s*data-stripe-url="[^"]*"', "", tag)
