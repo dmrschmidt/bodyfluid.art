@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Journal — Bodyfluid</title>
+<meta name="description" content="Studio notes from Bodyfluid. On paper, the body, drying times, and the brief life of a form on a coloured ground." />
+<link rel="canonical" href="https://bodyfluid.art/journal.html" />
+<meta name="robots" content="index,follow" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Journal — Bodyfluid" />
+<meta property="og:description" content="Studio notes from Bodyfluid." />
+<meta property="og:url" content="https://bodyfluid.art/journal.html" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.bunny.net" crossorigin>
+<link href="https://fonts.bunny.net/css2?family=Archivo:wght@400;500;700;900&family=Archivo+Black&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#0a0a0a; --paper:#ededea; --coral:#f0a07a; --lemon:#f1ee76; --mute:#5a5a55;
+          --periwinkle:#8a8aff; --mint:#b9d9c4; --orchid:#e1a1e8; --vermilion:#d12a35; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--paper); color: var(--ink); font-family: 'Archivo', sans-serif; font-size: 14px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: underline; text-decoration-color: rgba(10,10,10,0.25); text-underline-offset: 2px; }
+  a:hover { text-decoration-color: var(--ink); }
+
+  nav.top { position: sticky; top: 0; background: var(--paper); border-bottom: 2px solid var(--ink); display: flex; align-items: center; justify-content: space-between; padding: 16px 28px; z-index: 50; font-family: 'Archivo', sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; font-weight: 700; }
+  nav.top .brand { font-family: 'Archivo Black', sans-serif; font-size: 18px; letter-spacing: -0.02em; text-transform: uppercase; text-decoration: none; }
+  nav.top .brand .slash { color: var(--coral); font-family: 'Newsreader', serif; font-style: italic; font-weight: 300; font-size: 22px; text-transform: none; }
+  nav.top ul { display: flex; gap: 28px; list-style: none; }
+  nav.top ul a { text-decoration: none; }
+  nav.top ul a:hover { color: var(--coral); }
+
+  .page-head {
+    border-bottom: 2px solid var(--ink);
+    padding: 80px 28px 56px;
+    text-align: center;
+  }
+  .page-head .eyebrow {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    color: var(--mute);
+    margin-bottom: 20px;
+  }
+  .page-head h1 {
+    font-family: 'Archivo Black', sans-serif;
+    font-weight: 900;
+    font-size: clamp(56px, 11vw, 160px);
+    line-height: 0.86;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+  }
+  .page-head h1 em {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--mute);
+    text-transform: none;
+    letter-spacing: -0.02em;
+  }
+  .page-head .sub {
+    margin-top: 22px;
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 18px;
+    color: var(--mute);
+    line-height: 1.5;
+  }
+
+  main { max-width: 760px; margin: 0 auto; padding: 64px 28px 96px; }
+
+  article.entry {
+    border-top: 1px solid rgba(10,10,10,0.18);
+    padding-top: 48px;
+    margin-top: 56px;
+    scroll-margin-top: 80px;
+  }
+  article.entry:first-of-type { border-top: 0; padding-top: 0; margin-top: 0; }
+
+  .entry-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 28px;
+    align-items: baseline;
+    margin-bottom: 22px;
+  }
+  .entry-header .num,
+  .entry-header .place {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    color: var(--mute);
+  }
+  .entry-header .num strong {
+    color: var(--coral);
+    font-weight: 700;
+  }
+
+  article.entry h2 {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: clamp(32px, 4vw, 46px);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    margin-bottom: 26px;
+    color: var(--ink);
+  }
+
+  .entry-body {
+    font-family: 'Newsreader', serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.78;
+    color: #1c1c1a;
+  }
+  .entry-body p { margin-bottom: 18px; }
+  .entry-body p:last-child { margin-bottom: 0; }
+  .entry-body em { font-style: italic; }
+  .entry-body .drop-cap::first-letter {
+    font-family: 'Archivo Black', sans-serif;
+    font-weight: 900;
+    font-size: 56px;
+    float: left;
+    line-height: 0.88;
+    margin: 6px 10px 0 0;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+
+  .more {
+    margin-top: 88px;
+    text-align: center;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.34em;
+    color: var(--mute);
+  }
+
+  .back {
+    margin-top: 56px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.24em;
+    font-weight: 700;
+  }
+  .back a { text-decoration: none; }
+  .back a:hover { color: var(--coral); }
+
+  footer { background: var(--ink); color: var(--paper); padding: 24px 28px 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; display: flex; flex-direction: column; gap: 18px; }
+  footer .links { display: flex; flex-wrap: wrap; gap: 18px 28px; justify-content: center; border-top: 1px solid rgba(237,237,234,0.18); border-bottom: 1px solid rgba(237,237,234,0.18); padding: 14px 0; font-size: 10px; letter-spacing: 0.18em; }
+  footer .links a { color: var(--paper); text-decoration: none; }
+  footer .links a:hover { color: var(--lemon); }
+  footer .fine { font-family: 'Newsreader', serif; font-style: italic; font-weight: 300; font-size: 12px; letter-spacing: 0; text-transform: none; color: rgba(237,237,234,0.6); max-width: 760px; margin: 0 auto; text-align: center; line-height: 1.5; }
+
+  @media (max-width: 700px) {
+    nav.top ul { display: none; }
+    main { padding: 48px 22px 72px; }
+    .page-head { padding: 64px 22px 44px; }
+    .entry-body .drop-cap::first-letter { font-size: 44px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <a href="index.html" class="brand">BODYFLUID<span class="slash">/</span>ART</a>
+  <ul>
+    <li><a href="index.html#work">Work</a></li>
+    <li><a href="index.html#about">Studio</a></li>
+    <li><a href="index.html#prints">Prints</a></li>
+    <li><a href="journal.html">Journal</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-head">
+  <div class="eyebrow">iv. <em>/notes</em></div>
+  <h1>Journal<em>.</em></h1>
+  <p class="sub">Field notes from the studio. On paper, the body,<br>drying times, and the brief life of a form on a coloured ground.</p>
+</div>
+
+<main>
+
+  <article class="entry" id="n005">
+    <header class="entry-header">
+      <div class="num"><strong>Entry № 005</strong> · MMXXVI · May</div>
+      <div class="place">Studio · late afternoon</div>
+    </header>
+    <h2>On the brief life of a form on paper.</h2>
+    <div class="entry-body drop-cap">
+      <p>A few seconds. Sometimes less. Long enough for one frame, occasionally two, before the paper begins to drink the form back into itself.</p>
+      <p>The temptation, of course, is to extend the form's life. There are coatings that would slow the absorption; there are surfaces that would refuse it. I have used none of them. The discipline of the work is to honour the paper's appetite. What the paper takes, the paper takes. The photograph is a record of a brief life, not the life itself, and the brevity is part of what it is recording.</p>
+      <p>By the time the print returns from the lab — Hahnemühle Photo Rag Baryta, signed in graphite, numbered, set flat in the file — the original sheet has dried back into uniform colour. The trace is gone. There is no specimen to keep. There is only the photograph, the certificate, and the receipt of an afternoon that happened once.</p>
+      <p>This is the part of the practice I keep returning to. Most work survives itself. This work does not. It is photography because, without the camera, the work would not exist past five o'clock.</p>
+    </div>
+  </article>
+
+  <article class="entry" id="n004">
+    <header class="entry-header">
+      <div class="num"><strong>Entry № 004</strong> · MMXXVI · April</div>
+      <div class="place">Atelier · spring light</div>
+    </header>
+    <h2>Why coloured paper, and why these six.</h2>
+    <div class="entry-body drop-cap">
+      <p>The five papers were chosen over years; the sixth this winter. <em>Periwinkle</em> came first, because it was the colour the studio's afternoon light fell into. <em>Lemon</em> followed for its rudeness — a yellow that admits no melancholy. <em>Coral</em> was a softening. <em>Mint</em> a cooling. <em>Orchid</em> the colour of skin behind a net curtain. And <em>vermilion</em>, finally, for the moment when restraint becomes its opposite.</p>
+      <p>I am suspicious of red in art. It does too much of the work. But the cycle felt unfinished without it. The trace on vermilion is unmistakable, and the paper refuses to be polite about it. The plate is loud where the others are quiet. The series learned something I had not asked it to learn.</p>
+      <p>Coloured paper has, for me, an honesty that white paper does not. White paper claims neutrality and lies — it shows the form against a backdrop the eye reads as nothing. Coloured paper admits its presence. It says: <em>I am here, the trace is here, you are looking at both.</em> The photograph that follows is a photograph of a meeting, not of a thing on a ground.</p>
+      <p>I do not expect to add a seventh. Six is the number the room can hold.</p>
+    </div>
+  </article>
+
+  <article class="entry" id="n003">
+    <header class="entry-header">
+      <div class="num"><strong>Entry № 003</strong> · MMXXVI · March</div>
+      <div class="place">Maybachufer · north window</div>
+    </header>
+    <h2>Drying times, light, and the room.</h2>
+    <div class="entry-body drop-cap">
+      <p>The studio is one north-facing room on Maybachufer. In the morning the light enters slowly; by mid-afternoon it stalls; by five it has gone. There is a flat file under the window where the papers wait. There is a tripod that does not move. There is no music when I work.</p>
+      <p>A working session is, in practice, mostly waiting. The paper is laid flat. The body is present, unrehearsed. The trace is offered, then left alone. From the moment a form arrives on a coloured ground until the paper begins to drink it back is, on a good day, four to six seconds. The shutter has time for one frame, sometimes two. After that the form is a memory the paper is half-finished forgetting.</p>
+      <p>Drying takes longer than recording. The paper holds the trace for hours, lightening as the water leaves; by the next morning, all that remains is a faint stain of pigment from the paper itself. I keep the sheets in the flat file overnight as a kind of mourning.</p>
+      <p>It is a small room. The work fits it. I do not believe a larger one would help.</p>
+    </div>
+  </article>
+
+  <article class="entry" id="n002">
+    <header class="entry-header">
+      <div class="num"><strong>Entry № 002</strong> · MMXXVI · February</div>
+      <div class="place">Studio · evening</div>
+    </header>
+    <h2>Notes on the body as instrument.</h2>
+    <div class="entry-body drop-cap">
+      <p>There is a misunderstanding I want to set down before it travels. The body is not the subject of this work. The body is the instrument.</p>
+      <p>A trumpet, a chisel, a brush, a hand: these are instruments. They make a mark; they leave a trace. The trace is what the photograph records, not the maker of the trace. To dwell on the body would be to mistake the violin for the sonata.</p>
+      <p>What I find I am asking, plate after plate, is whether a private moment can be made to keep its privacy in front of a lens. I think it can. The discipline is to stop the eye before it begins to read — to keep the image close to what the paper saw, and no closer. Coloured paper helps with this. It pulls the trace into the field of the ground; the ground becomes a kind of veil. The body recedes, the form steps forward, and the work begins.</p>
+      <p>The work is small, slow, and private. The privacy is not a concession to discretion. It is the condition of the form.</p>
+    </div>
+  </article>
+
+  <article class="entry" id="n001">
+    <header class="entry-header">
+      <div class="num"><strong>Entry № 001</strong> · MMXXVI · January</div>
+      <div class="place">Studio · first light</div>
+    </header>
+    <h2>First plate: a beginning, in periwinkle.</h2>
+    <div class="entry-body drop-cap">
+      <p>A first entry is always a forgery. You pretend you know what the page is for. You don't. You write it anyway, because the alternative is to keep everything inside your own head, where it loses shape.</p>
+      <p>The first plate of the cycle was made on a sheet of periwinkle paper laid flat on the floor of the studio. Light from the north window, late afternoon, the kind that thins as you watch it. I had been turning the idea over for months — paper as ground, the body as instrument, the camera as patient witness — and on a Tuesday in January the room said: <em>now.</em></p>
+      <p>What the camera caught was small. A trace, a single arrival. The paper drank it back inside of a minute. The print followed three weeks later, after the long arithmetic of printing — Hahnemühle Photo Rag Baryta, 315 gsm, the same paper one uses for a photograph one believes in.</p>
+      <p>I had thought I would write more here, about why one begins this kind of work. The honest answer is that I began because I wanted to see what would happen. The paper said yes. So did the room.</p>
+    </div>
+  </article>
+
+  <p class="more">More entries when the studio allows.</p>
+
+  <p class="back"><a href="index.html">← back to the catalogue</a></p>
+</main>
+
+<footer>
+  <div class="links">
+    <a href="terms.html">AGB / Terms</a>
+    <a href="withdrawal.html">Withdrawal</a>
+    <a href="shipping.html">Shipping</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="imprint.html">Imprint</a>
+    <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">EU ODR platform</a>
+  </div>
+  <div class="fine">
+    All prices include statutory VAT (margin scheme for works of art, § 25a
+    UStG). Shipping is calculated at checkout. We are not willing or obliged
+    to participate in dispute resolution before a consumer arbitration board
+    (§ 36 VSBG).
+  </div>
+</footer>
+
+</body>
+</html>
