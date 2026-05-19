@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy policy — Bodyfluid</title>
+<meta name="description" content="How bodyfluid.art processes personal data, named third parties, and your rights under the GDPR." />
+<link rel="canonical" href="https://bodyfluid.art/privacy.html" />
+<meta name="robots" content="index,follow" />
+<link rel="preconnect" href="https://fonts.bunny.net" crossorigin>
+<link href="https://fonts.bunny.net/css2?family=Archivo:wght@400;500;700;900&family=Archivo+Black&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#0a0a0a; --paper:#ededea; --coral:#f0a07a; --lemon:#f1ee76; --mute:#5a5a55; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--paper); color: var(--ink); font-family: 'Archivo', sans-serif; font-size: 14px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: underline; text-decoration-color: rgba(10,10,10,0.25); text-underline-offset: 2px; }
+  a:hover { text-decoration-color: var(--ink); }
+  nav.top { position: sticky; top: 0; background: var(--paper); border-bottom: 2px solid var(--ink); display: flex; align-items: center; justify-content: space-between; padding: 16px 28px; z-index: 50; font-family: 'Archivo', sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; font-weight: 700; }
+  nav.top .brand { font-family: 'Archivo Black', sans-serif; font-size: 18px; letter-spacing: -0.02em; text-transform: uppercase; text-decoration: none; }
+  nav.top .brand .slash { color: var(--coral); font-family: 'Newsreader', serif; font-style: italic; font-weight: 300; font-size: 22px; text-transform: none; }
+  nav.top ul { display: flex; gap: 28px; list-style: none; }
+  nav.top ul a { text-decoration: none; }
+  nav.top ul a:hover { color: var(--coral); }
+  main { max-width: 760px; margin: 0 auto; padding: 80px 28px 96px; }
+  .eyebrow { font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 10px; text-transform: uppercase; letter-spacing: 0.28em; color: var(--mute); margin-bottom: 22px; }
+  h1 { font-family: 'Archivo Black', sans-serif; font-weight: 900; font-size: clamp(48px, 8vw, 88px); line-height: 0.92; letter-spacing: -0.04em; text-transform: uppercase; }
+  h1 em { font-family: 'Newsreader', serif; font-style: italic; font-weight: 300; text-transform: none; letter-spacing: -0.02em; color: var(--mute); }
+  .revised { font-size: 10px; text-transform: uppercase; letter-spacing: 0.24em; color: var(--mute); margin-top: 22px; font-weight: 700; }
+  .prose { margin-top: 56px; }
+  .prose section { margin-bottom: 40px; }
+  .prose .sec { font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 10px; text-transform: uppercase; letter-spacing: 0.28em; color: var(--coral); margin-bottom: 10px; }
+  .prose h2 { font-family: 'Archivo Black', sans-serif; font-weight: 900; font-size: 22px; letter-spacing: -0.02em; text-transform: uppercase; margin-bottom: 14px; }
+  .prose p, .prose ul, .prose ol { font-family: 'Newsreader', serif; font-weight: 400; font-size: 16px; line-height: 1.7; color: #1c1c1a; margin-bottom: 14px; }
+  .prose ul, .prose ol { padding-left: 22px; }
+  .prose ul li, .prose ol li { margin-bottom: 6px; }
+  .prose em { font-style: italic; }
+  .prose strong { font-family: 'Archivo', sans-serif; font-weight: 700; }
+  .form-block { border: 1px solid var(--ink); padding: 20px 22px; background: rgba(10,10,10,0.03); margin: 18px 0; }
+  .form-block p { margin-bottom: 8px; }
+  table.ship { width: 100%; border-collapse: collapse; margin: 14px 0 22px; font-family: 'Archivo', sans-serif; font-size: 13px; }
+  table.ship th, table.ship td { border-bottom: 1px solid rgba(10,10,10,0.18); padding: 10px 8px; text-align: left; vertical-align: top; }
+  table.ship th { font-weight: 700; font-size: 10px; text-transform: uppercase; letter-spacing: 0.18em; color: var(--mute); }
+  .stack { margin-bottom: 22px; }
+  .stack .label { display: block; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 10px; text-transform: uppercase; letter-spacing: 0.18em; color: var(--mute); margin-bottom: 6px; }
+  .back { margin-top: 64px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.24em; font-weight: 700; display: flex; gap: 28px; flex-wrap: wrap; }
+  .back a { text-decoration: none; }
+  .back a:hover { color: var(--coral); }
+  footer { background: var(--ink); color: var(--paper); padding: 24px 28px 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; display: flex; flex-direction: column; gap: 18px; }
+  footer .links { display: flex; flex-wrap: wrap; gap: 18px 28px; justify-content: center; border-top: 1px solid rgba(237,237,234,0.18); border-bottom: 1px solid rgba(237,237,234,0.18); padding: 14px 0; font-size: 10px; letter-spacing: 0.18em; }
+  footer .links a { color: var(--paper); text-decoration: none; }
+  footer .links a:hover { color: var(--lemon); }
+  footer .fine { font-family: 'Newsreader', serif; font-style: italic; font-weight: 300; font-size: 12px; letter-spacing: 0; text-transform: none; color: rgba(237,237,234,0.6); max-width: 760px; margin: 0 auto; text-align: center; line-height: 1.5; }
+  @media (max-width: 700px) { nav.top ul { display: none; } main { padding: 56px 22px 72px; } }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <a href="index.html" class="brand">BODYFLUID<span class="slash">/</span>ART</a>
+  <ul>
+    <li><a href="index.html#work">Work</a></li>
+    <li><a href="index.html#about">Studio</a></li>
+    <li><a href="index.html#prints">Prints</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+  <div class="eyebrow">§ VIII — Privacy</div>
+  <h1>Privacy<br><em>policy.</em></h1>
+  <div class="revised">Last revised · MMXXVI · May · Applies to bodyfluid.art</div>
+
+  <article class="prose">
+
+    <section>
+      <div class="sec">§ 1</div>
+      <h2>Controller</h2>
+      <p>The controller responsible for the processing of personal data on this site within the meaning of the General Data Protection Regulation (Regulation (EU) 2016/679, "GDPR") is the operator of <strong>bodyfluid.art</strong>. Postal address, telephone, and authorised representative are listed in the <a href="https://dmrschmidt.de/imprint.html" target="_blank" rel="noopener">imprint</a>. Data-related correspondence is handled at <a href="mailto:hello@bodyfluid.art">hello@bodyfluid.art</a>.</p>
+    </section>
+
+    <section>
+      <div class="sec">§ 2</div>
+      <h2>Scope</h2>
+      <p>This policy describes how <strong>bodyfluid.art</strong> processes data when a visitor browses the catalogue, views a plate, or initiates a purchase via the linked Stripe Checkout page. The site does not set first-party cookies, does not use analytics, and does not embed advertising or social trackers.</p>
+    </section>
+
+    <section>
+      <div class="sec">§ 3</div>
+      <h2>What is collected, and on what legal basis</h2>
+      <p>The site is delivered as static HTML; no account is created and no form data is collected here directly. The categories below are the only ones touched in connection with this site:</p>
+      <ul>
+        <li><strong>Server access logs.</strong> When a page is requested, the hosting infrastructure receives the technical request data (IP address, requested path, timestamp, referrer, user-agent string). This is necessary to deliver the page and is processed under Art. 6(1)(f) GDPR (legitimate interest in operating and securing the site). Logs are retained for no longer than necessary and are not used to profile visitors.</li>
+        <li><strong>Email correspondence.</strong> When a visitor writes to <span>hello@bodyfluid.art</span>, the message and contact details are processed on the basis of Art. 6(1)(b) GDPR (steps prior to entering into a contract) or Art. 6(1)(f) GDPR (legitimate interest in responding to enquiries), and retained as long as the matter requires.</li>
+        <li><strong>Purchase data.</strong> A purchase is initiated by clicking "Acquire" on a plate, which redirects to Stripe Checkout. From that point, the data the buyer enters (name, billing and shipping address, payment data) is collected by Stripe; the studio receives a fulfilment record (name, shipping address, plate, price, transaction reference) on the legal basis of Art. 6(1)(b) GDPR (performance of the sales contract). Payment-card data is never processed by or stored on this site.</li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="sec">§ 4</div>
+      <h2>Third parties involved in delivering the site</h2>
+      <p>The site relies on two categories of external service. Each is named below, together with the data it receives and the legal basis under Art. 6(1)(f) GDPR (legitimate interest in delivering a fast, typographically consistent, payment-enabled site).</p>
+
+      <div class="stack">
+        <span class="label">Hosting / log files</span>
+        <p>The site is served as a static page from <em>[hosting provider — please confirm and replace this placeholder]</em>. The hoster processes the access logs described in § 3 on the studio's behalf as a data processor within the meaning of Art. 28 GDPR; a data-processing agreement is in place.</p>
+      </div>
+
+      <div class="stack">
+        <span class="label">Fonts — Bunny Fonts (BunnyWay d.o.o., Slovenia)</span>
+        <p>The display and body typefaces are loaded from Bunny Fonts, an EU-based mirror of the Google Fonts catalogue operated by BunnyWay d.o.o., Cesta komandanta Staneta 4A, 1215 Medvode, Slovenia. Bunny Fonts does not set cookies and, per its public commitment, does not log IP addresses for the purpose of profiling. Data leaves the visitor's browser solely to retrieve the CSS and font files. Bunny's privacy notice is available at <a href="https://bunny.net/privacy" target="_blank" rel="noopener">bunny.net/privacy</a>.</p>
+      </div>
+
+      <div class="stack">
+        <span class="label">Payment — Stripe Payments Europe, Ltd. (Ireland)</span>
+        <p>Acquisition links from individual plates redirect to <strong>checkout.stripe.com</strong>, operated by Stripe Payments Europe, Ltd., 1 Grand Canal Street Lower, Grand Canal Dock, Dublin, Ireland. Stripe is the controller of the payment data processed there. The data the buyer enters in Checkout (name, billing and shipping address, payment instrument data) is collected by Stripe under its own privacy policy at <a href="https://stripe.com/privacy" target="_blank" rel="noopener">stripe.com/privacy</a>; the studio receives only the fulfilment record described in § 3. No Stripe scripts, cookies, or fingerprinting tools run on <strong>bodyfluid.art</strong> itself — they activate only after the redirect.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec">§ 5</div>
+      <h2>International transfers</h2>
+      <p>The services named in § 4 operate from EU member states (Slovenia, Ireland). Stripe may transfer payment data to its parent company in the United States; such transfers are covered by the EU–US Data Privacy Framework adequacy decision of 10 July 2023 and by Stripe's Standard Contractual Clauses. Bunny Fonts requests are served from EU infrastructure.</p>
+    </section>
+
+    <section>
+      <div class="sec">§ 6</div>
+      <h2>Cookies and tracking</h2>
+      <p>This site sets no cookies and runs no analytics, advertising or social-tracking scripts. No consent banner is therefore presented. Should this change in the future, this policy will be updated and explicit consent will be obtained where the law requires it.</p>
+    </section>
+
+    <section>
+      <div class="sec">§ 7</div>
+      <h2>Your rights</h2>
+      <p>Subject to the conditions set out in the GDPR, you have the following rights with respect to data we process about you:</p>
+      <ul>
+        <li>Right of access (Art. 15 GDPR);</li>
+        <li>Right to rectification (Art. 16);</li>
+        <li>Right to erasure (Art. 17);</li>
+        <li>Right to restriction of processing (Art. 18);</li>
+        <li>Right to data portability (Art. 20);</li>
+        <li>Right to object to processing carried out under Art. 6(1)(f) (Art. 21);</li>
+        <li>Right to withdraw consent at any time where processing is based on consent (Art. 7(3)), without affecting the lawfulness of processing carried out before withdrawal.</li>
+      </ul>
+      <p>To exercise any of these rights, write to <a href="mailto:hello@bodyfluid.art">hello@bodyfluid.art</a>. You also have the right to lodge a complaint with a supervisory authority (Art. 77 GDPR). The competent authority for the controller is the Berlin Commissioner for Data Protection and Freedom of Information (<a href="https://www.datenschutz-berlin.de" target="_blank" rel="noopener">datenschutz-berlin.de</a>).</p>
+    </section>
+
+    <section>
+      <div class="sec">§ 8</div>
+      <h2>Data security</h2>
+      <p>The site is served over HTTPS. Email correspondence is exchanged via the providers chosen by the studio and the visitor and is, by the nature of email, not end-to-end encrypted by default.</p>
+    </section>
+
+    <section>
+      <div class="sec">§ 9</div>
+      <h2>Changes to this policy</h2>
+      <p>This policy applies as of the date shown above. Updates may be made to reflect changes in technology, legal requirements, or the third-party services involved in delivering the site. The version in force is always the one published at this URL.</p>
+    </section>
+
+  </article>
+
+  <p class="back">
+<a href="terms.html">terms of sale</a>
+    <a href="withdrawal.html">withdrawal</a>
+    <a href="shipping.html">shipping</a>
+    <a href="index.html">back to the catalogue →</a>
+  </p>
+</main>
+
+<footer>
+  <div class="links">
+    <a href="terms.html">AGB / Terms</a>
+    <a href="withdrawal.html">Withdrawal</a>
+    <a href="shipping.html">Shipping</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="https://dmrschmidt.de/imprint.html" target="_blank" rel="noopener">Imprint</a>
+    <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">EU ODR platform</a>
+  </div>
+  <div class="fine">
+    All prices include statutory VAT (margin scheme for works of art, § 25a
+    UStG). Shipping is calculated at checkout. We are not willing or obliged
+    to participate in dispute resolution before a consumer arbitration board
+    (§ 36 VSBG).
+  </div>
+</footer>
+
+</body>
+</html>

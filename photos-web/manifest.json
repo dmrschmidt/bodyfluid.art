@@ -1,0 +1,22 @@
+{
+  "plate-I.jpg": {
+    "height": 999,
+    "width": 1500
+  },
+  "plate-II.jpg": {
+    "height": 999,
+    "width": 1500
+  },
+  "plate-III.jpg": {
+    "height": 1000,
+    "width": 1500
+  },
+  "plate-IV.jpg": {
+    "height": 1500,
+    "width": 1125
+  },
+  "plate-V.jpg": {
+    "height": 999,
+    "width": 1500
+  }
+}

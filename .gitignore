@@ -1,1 +1,9 @@
 .env
+.stripe_products.json
+.stripe_products.test.json
+.stripe_products.live.json
+.DS_Store
+__pycache__/
+.claude/
+node_modules/
+.index.html.swp
