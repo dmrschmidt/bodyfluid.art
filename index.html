@@ -240,8 +240,10 @@
     color: var(--ink);
     padding: 0 0.1em 0.04em;
     border: 2px solid var(--ink);
-    transform: rotate(-1.5deg) translateY(-0.05em);
-    box-shadow: 8px 8px 0 var(--ink);
+    transform: rotate(-1.5deg) translateY(-0.05em) translateZ(0);
+    box-shadow: 8px 8px 0 0.5px var(--ink);
+    will-change: transform;
+    backface-visibility: hidden;
   }
   .hero-type .pop.lemon { background: var(--lemon); }
   .hero-type .pop.coral { background: var(--coral); }

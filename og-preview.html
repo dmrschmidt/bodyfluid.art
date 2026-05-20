@@ -101,7 +101,12 @@
     padding: 36px 38px 30px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+  }
+  .og .type-panel .middle {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   /* top meta row */
@@ -116,6 +121,8 @@
     font-size: 32px;
     letter-spacing: -0.04em;
     text-transform: uppercase;
+    -webkit-text-stroke: 1.5px var(--ink);
+    paint-order: stroke fill;
   }
   .og .top .brand em {
     font-family: 'Newsreader', serif;
@@ -124,6 +131,7 @@
     color: var(--coral);
     text-transform: none;
     letter-spacing: -0.02em;
+    -webkit-text-stroke: 0;
   }
   .og .top .vol-tag {
     background: var(--ink);
@@ -153,20 +161,17 @@
     line-height: 0.84;
     text-transform: uppercase;
     font-size: 82px;
-    margin-top: 18px;
   }
   .og .megatype .l1 { display: block; }
   .og .megatype .l2 {
     display: block;
     padding-left: 26px;
+    white-space: nowrap;
   }
   .og .megatype .l3 {
     display: block;
-    font-size: 34px;
-    line-height: 1;
-    margin-top: 14px;
-    letter-spacing: -0.03em;
-    color: var(--ink);
+    padding-left: 52px;
+    margin-top: 4px;
   }
   .og .megatype .ital {
     font-family: 'Newsreader', serif;
@@ -181,8 +186,10 @@
     color: var(--ink);
     padding: 0 0.12em 0.04em;
     border: 3px solid var(--ink);
-    transform: rotate(-1.8deg) translateY(-0.05em);
-    box-shadow: 7px 7px 0 var(--ink);
+    transform: rotate(-1.8deg) translateY(-0.05em) translateZ(0);
+    box-shadow: 7px 7px 0 0.5px var(--ink);
+    will-change: transform;
+    backface-visibility: hidden;
   }
   .og .megatype .punct {
     color: var(--coral);
@@ -238,7 +245,7 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-top: 10px;
+    margin-top: 28px;
     font-size: 11px;
     font-weight: 700;
     text-transform: uppercase;
@@ -275,15 +282,16 @@
     <!-- RIGHT: type -->
     <div class="type-panel">
 
-      <div>
-        <div class="top">
-          <div class="brand">BODYFLUID<em>/</em>ART</div>
-          <div class="vol-tag"><em>vol.</em>I</div>
-        </div>
+      <div class="top">
+        <div class="brand">BODYFLUID<em>/</em>ART</div>
+        <div class="vol-tag"><em>vol.</em>I</div>
+      </div>
 
+      <div class="middle">
         <h1 class="megatype">
-          <span class="l1">SOMETHING <span class="ital">wet,</span></span>
-          <span class="l2">SMTHNG <span class="pop">PRIVATE.</span></span>
+          <span class="l1">SOMETHING</span>
+          <span class="l2"><span class="ital">wet,</span>&nbsp;SMTHNG</span>
+          <span class="l3"><span class="pop">PRIVATE.</span></span>
         </h1>
 
         <div class="live-row">
