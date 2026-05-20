@@ -1224,6 +1224,42 @@
     footer .foot-row-meta .right { grid-area: right; text-align: right; }
   }
 
+  /* Desktop hero layout — image left of the SOMETHING text, like og-preview. */
+  @media (min-width: 901px) {
+    .hero {
+      display: grid;
+      grid-template-columns: 7fr 5fr;
+    }
+    .hero-type {
+      grid-column: 2;
+      grid-row: 1;
+      padding: 32px 24px 28px;
+      display: flex;
+      align-items: center;
+    }
+    .hero-type h1 {
+      font-size: clamp(56px, 7vw, 132px);
+    }
+    .hero-feat { display: contents; }
+    .hero-feat .img-wrap {
+      grid-column: 1;
+      grid-row: 1 / span 2;
+      aspect-ratio: auto;
+      border-bottom: 0;
+    }
+    .hero-feat .side {
+      grid-column: 2;
+      grid-row: 2;
+    }
+    .hero-feat .side .specs {
+      border-bottom: 2px solid var(--ink);
+    }
+    .hero-strip {
+      grid-column: 1 / -1;
+      grid-row: 3;
+    }
+  }
+
   /* ============== PLATE MODAL ============== */
   /* Cards become keyboard-activatable buttons. */
   section#work article.card,
