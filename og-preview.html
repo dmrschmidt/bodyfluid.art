@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Bodyfluid — OG preview</title>
+<link rel="preconnect" href="https://fonts.bunny.net" crossorigin>
+<link href="https://fonts.bunny.net/css2?family=Archivo:wght@400;500;700;900&family=Archivo+Black&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --periwinkle: #8a8aff;
+    --lemon:     #f1ee76;
+    --coral:     #f0a07a;
+    --mint:      #b9d9c4;
+    --orchid:    #e1a1e8;
+    --vermilion: #d12a35;
+    --ink:       #0a0a0a;
+    --paper:     #ededea;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #222; }
+  body {
+    font-family: 'Archivo', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0;
+  }
+
+  /* exact OG card size — 1200 x 630 */
+  .og {
+    width: 1200px;
+    height: 630px;
+    background: var(--paper);
+    color: var(--ink);
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 560px 1fr;
+  }
+
+  /* ============== LEFT — image panel ============== */
+  .og .img-panel {
+    position: relative;
+    border-right: 3px solid var(--ink);
+    overflow: hidden;
+    background: var(--lemon);
+  }
+  .og .img-panel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  /* pin tag bottom-left of image */
+  .og .pin {
+    position: absolute;
+    left: 24px;
+    bottom: 24px;
+    background: var(--paper);
+    color: var(--ink);
+    border: 2px solid var(--ink);
+    padding: 8px 14px 9px;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    box-shadow: 6px 6px 0 var(--ink);
+  }
+  .og .pin em {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-weight: 300;
+    text-transform: none;
+    margin-right: 6px;
+    letter-spacing: -0.01em;
+  }
+
+  /* tiny meta block top-left of image */
+  .og .img-panel .corner {
+    position: absolute;
+    top: 22px;
+    left: 22px;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink);
+    background: var(--periwinkle);
+    border: 2px solid var(--ink);
+    padding: 5px 9px 6px;
+  }
+
+  /* ============== RIGHT — type panel ============== */
+  .og .type-panel {
+    position: relative;
+    padding: 36px 38px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /* top meta row */
+  .og .top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .og .top .brand {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 32px;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+  }
+  .og .top .brand em {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--coral);
+    text-transform: none;
+    letter-spacing: -0.02em;
+  }
+  .og .top .vol-tag {
+    background: var(--ink);
+    color: var(--lemon);
+    padding: 8px 13px 9px;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transform: rotate(4deg);
+  }
+  .og .top .vol-tag em {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--paper);
+    text-transform: none;
+    margin-right: 4px;
+    letter-spacing: -0.01em;
+  }
+
+  /* mega type — the krass hero */
+  .og .megatype {
+    font-family: 'Archivo Black', sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    line-height: 0.84;
+    text-transform: uppercase;
+    font-size: 82px;
+    margin-top: 18px;
+  }
+  .og .megatype .l1 { display: block; }
+  .og .megatype .l2 {
+    display: block;
+    padding-left: 26px;
+  }
+  .og .megatype .l3 {
+    display: block;
+    font-size: 34px;
+    line-height: 1;
+    margin-top: 14px;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+  }
+  .og .megatype .ital {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-weight: 300;
+    text-transform: none;
+    letter-spacing: -0.04em;
+  }
+  .og .megatype .pop {
+    display: inline-block;
+    background: var(--periwinkle);
+    color: var(--ink);
+    padding: 0 0.12em 0.04em;
+    border: 3px solid var(--ink);
+    transform: rotate(-1.8deg) translateY(-0.05em);
+    box-shadow: 7px 7px 0 var(--ink);
+  }
+  .og .megatype .punct {
+    color: var(--coral);
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-weight: 300;
+    text-transform: none;
+  }
+
+  /* bottom strip — index */
+  .og .strip {
+    border-top: 2px solid var(--ink);
+    margin: 0 -38px -30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .og .strip .cell {
+    padding: 14px 16px 14px;
+    border-right: 1px solid var(--ink);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: var(--paper);
+  }
+  .og .strip .cell:last-child { border-right: 0; }
+  .og .strip .cell .k {
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--ink);
+    opacity: 0.55;
+  }
+  .og .strip .cell .v {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+  .og .strip .cell .v em {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-weight: 300;
+    text-transform: none;
+    letter-spacing: -0.01em;
+  }
+  .og .strip .cell.featured {
+    background: var(--lemon);
+  }
+
+  /* live dot */
+  .og .live-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+  }
+  .og .live-row .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--vermilion);
+    box-shadow: 0 0 0 3px rgba(209, 42, 53, 0.18);
+  }
+  .og .live-row em {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-weight: 300;
+    text-transform: none;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    opacity: 0.7;
+  }
+</style>
+</head>
+<body>
+  <div class="og">
+
+    <!-- LEFT: image -->
+    <div class="img-panel">
+      <span class="corner">N° 02 · plate II</span>
+      <img src="photos-web/plate-II.jpg" alt="Plate II — lemon">
+      <span class="pin"><em>plate</em>II · LEMON</span>
+    </div>
+
+    <!-- RIGHT: type -->
+    <div class="type-panel">
+
+      <div>
+        <div class="top">
+          <div class="brand">BODYFLUID<em>/</em>ART</div>
+          <div class="vol-tag"><em>vol.</em>I</div>
+        </div>
+
+        <h1 class="megatype">
+          <span class="l1">SOMETHING <span class="ital">wet,</span></span>
+          <span class="l2">SOMETHING <span class="pop">SLOW.</span></span>
+          <span class="l3">A <span class="ital">working</span> ARCHIVE<span class="punct">.</span></span>
+        </h1>
+
+        <div class="live-row">
+          <span class="dot"></span>
+          <span>Studio · Neukölln</span>
+          <em>— open by appointment</em>
+        </div>
+      </div>
+
+      <div class="strip">
+        <div class="cell">
+          <span class="k">Paper</span>
+          <span class="v">Hahnemühle <em>315</em></span>
+        </div>
+        <div class="cell">
+          <span class="k">Format</span>
+          <span class="v">70 x 50<em>cm</em></span>
+        </div>
+        <div class="cell featured">
+          <span class="k">Edition</span>
+          <span class="v">7 <em>+ 2 AP</em></span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
