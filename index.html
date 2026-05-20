@@ -1191,9 +1191,15 @@
     .contact .grid .col { border-bottom: 2px solid var(--ink); }
     .contact .grid .col:nth-child(2n) { border-right: 0; }
 
-    footer { grid-template-columns: 1fr; gap: 12px; text-align: center; }
-    footer .right { text-align: center; }
-    footer .center { font-size: 24px; }
+    footer { gap: 12px; }
+    footer .foot-row-meta {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "center center" "left right";
+      gap: 14px 12px;
+    }
+    footer .foot-row-meta .center { grid-area: center; font-size: 24px; text-align: center; }
+    footer .foot-row-meta .left { grid-area: left; }
+    footer .foot-row-meta .right { grid-area: right; text-align: right; }
   }
 
   /* ============== PLATE MODAL ============== */
@@ -1404,7 +1410,17 @@
     .modal .modal-image {
       border-right: 0;
       border-bottom: 2px solid var(--ink);
-      max-height: 50vh;
+      min-height: 0;
+      max-height: none;
+      background: transparent;
+    }
+    .modal .modal-image picture { display: block; width: 100%; }
+    .modal .modal-image img {
+      width: 100%;
+      height: auto;
+      max-height: none;
+      object-fit: cover;
+      background: transparent;
     }
     .modal .modal-info { padding: 22px 22px 20px; }
     .modal h2 { font-size: 36px; }
@@ -1587,7 +1603,7 @@
     <div class="img">
       <span class="corner">P—IV</span>
       <span class="swatch-tag"></span>
-      <picture><source type="image/webp" srcset="photos-web/plate-IV.webp"><img src="photos-web/plate-IV.jpg" alt="Plate IV" width="1125" height="1500" decoding="async" loading="lazy"></picture>
+      <picture><source type="image/webp" srcset="photos-web/plate-IV.webp"><img src="photos-web/plate-IV.jpg" alt="Plate IV" width="1500" height="1125" decoding="async" loading="lazy"></picture>
     </div>
     <div class="info">
       <h3>Mint<br><em>— vertical fall</em></h3>
@@ -1774,7 +1790,7 @@
            data-desc="Plate IV · Mint. A vertical fall on mint-green paper, photographed from above in available daylight. Pigment giclée on Hahnemühle Photo Rag Baryta, 315 gsm. 53 × 70 cm. Edition of 7 + 2 AP." data-stripe-url="https://buy.stripe.com/bJedR9fLBc0t9PS2vc4AU1O">
     <div class="img">
       <span class="ed-tag">Ed. 7</span>
-      <picture><source type="image/webp" srcset="photos-web/plate-IV.webp"><img src="photos-web/plate-IV.jpg" alt="Plate IV" width="1125" height="1500" decoding="async" loading="lazy"></picture>
+      <picture><source type="image/webp" srcset="photos-web/plate-IV.webp"><img src="photos-web/plate-IV.jpg" alt="Plate IV" width="1500" height="1125" decoding="async" loading="lazy"></picture>
     </div>
     <div class="info">
       <h4>P—IV<br><em>Mint</em></h4>

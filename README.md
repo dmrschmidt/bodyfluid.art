@@ -13,7 +13,7 @@ withdrawal.html         — Widerrufsbelehrung + Muster-Widerrufsformular
 shipping.html           — shipping & delivery
 privacy.html            — privacy policy
 originals/              — raw plate masters straight from camera
-photos/                 — five plate masters (plate-I.jpg … plate-V.jpg)
+photos/                 — six plate masters (plate-I.jpg … plate-V.jpg)
 photos-web/             — built artifact: optimised progressive JPEG +
                           WebP variants of each plate (capped at 1500 px
                           on the long edge), plus manifest.json with
