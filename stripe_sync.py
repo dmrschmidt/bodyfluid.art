@@ -53,7 +53,7 @@ DESCRIPTIONS = {
         "Plate I · Periwinkle. The opening plate of the cycle — a trace "
         "on saturated periwinkle paper, the long shoulder of a single "
         "form caught against the grain. Pigment giclée on Hahnemühle "
-        "Photo Rag Baryta, 315 gsm. 70 × 47 cm. Hand-numbered, signed in "
+        "Photo Rag Baryta, 315 gsm. 70 x 50cm. Hand-numbered, signed in "
         "graphite, shipped flat with a letterpress certificate of "
         "authenticity. Edition of 7 + 2 AP."
     ),
@@ -61,7 +61,7 @@ DESCRIPTIONS = {
         "Plate II · Lemon. A gravity study on saturated lemon-yellow "
         "paper — a diagonal arrival meeting its own broken stop. "
         "Pigment giclée on Hahnemühle Photo Rag Baryta, 315 gsm. "
-        "70 × 47 cm. Hand-numbered, signed in graphite, shipped flat "
+        "70 x 50cm. Hand-numbered, signed in graphite, shipped flat "
         "with a letterpress certificate of authenticity. Edition of "
         "7 + 2 AP."
     ),
@@ -69,7 +69,7 @@ DESCRIPTIONS = {
         "Plate III · Coral. Surface tension on coral-coloured paper — "
         "the brief life of a form on a coloured ground, before the paper "
         "begins to drink it back. Pigment giclée on Hahnemühle Photo "
-        "Rag Baryta, 315 gsm. 70 × 47 cm. Hand-numbered, signed in "
+        "Rag Baryta, 315 gsm. 70 x 50cm. Hand-numbered, signed in "
         "graphite, shipped flat with a letterpress certificate of "
         "authenticity. Edition of 7 + 2 AP."
     ),
@@ -84,14 +84,14 @@ DESCRIPTIONS = {
     "photos/plate-V.jpg": (
         "Plate V · Orchid. A soft pool resting on orchid-coloured paper, "
         "photographed in available daylight. Pigment giclée on Hahnemühle "
-        "Photo Rag Baryta, 315 gsm. 70 × 47 cm. Hand-numbered, signed in "
+        "Photo Rag Baryta, 315 gsm. 70 x 50cm. Hand-numbered, signed in "
         "graphite, shipped flat with a letterpress certificate of "
         "authenticity. Edition of 7 + 2 AP."
     ),
     "photos/plate-VI.jpg": (
         "Plate VI · Vermilion. A study in saturated red — the deepest "
         "ground in the cycle, and the loudest. Pigment giclée on "
-        "Hahnemühle Photo Rag Baryta, 315 gsm. 70 × 47 cm. Hand-numbered, "
+        "Hahnemühle Photo Rag Baryta, 315 gsm. 70 x 50cm. Hand-numbered, "
         "signed in graphite, shipped flat with a letterpress certificate "
         "of authenticity. Edition of 7 + 2 AP."
     ),

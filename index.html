@@ -128,6 +128,7 @@
     letter-spacing: -0.02em;
     text-transform: uppercase;
     gap: 8px;
+    -webkit-text-stroke: 1px currentColor;
   }
   nav .brand .slash {
     color: var(--coral);
@@ -810,6 +811,7 @@
     scroll-margin-top: 110px;
   }
   .prints .ed:last-child { border-right: 0; }
+  .prints .ed:nth-child(-n+3) { border-bottom: 2px solid var(--ink); }
   .prints .ed .img {
     aspect-ratio: 4/3;
     border-bottom: 2px solid var(--ink);
@@ -860,7 +862,6 @@
     margin-bottom: 18px;
   }
   .prints .ed .row {
-    border-top: 2px solid var(--ink);
     padding: 14px 22px;
     display: grid;
     grid-template-columns: 1fr auto;
@@ -1177,6 +1178,7 @@
 
     .prints { grid-template-columns: 1fr; }
     .prints .ed { border-right: 0; border-bottom: 2px solid var(--ink); }
+    .prints .ed:nth-child(-n+3) { border-bottom: 2px solid var(--ink); }
     .prints .ed:last-child { border-bottom: 0; }
 
     .journal .row { grid-template-columns: 60px 1fr 40px; }
@@ -1514,7 +1516,7 @@
       </div>
       <div class="specs">
         <span class="k">Paper</span><span class="v">Hahnemühle 315</span>
-        <span class="k">Format</span><span class="v">70 × 47 cm</span>
+        <span class="k">Format</span><span class="v">70 x 50cm</span>
         <span class="k">Made</span><span class="v">05 / 26</span>
         <span class="k">Edition</span><span class="v">7 + 2 AP</span>
       </div>
@@ -1541,8 +1543,8 @@
       <h3>Periwinkle<br><em>— trace, vol. I</em></h3>
       <span class="yr">'26</span>
       <div class="meta">
-        <span>Hahnemühle Baryta · 70 × 47 cm</span>
-        <span class="stock">07 of 07</span>
+        <span>Hahnemühle Baryta · 70 x 50cm</span>
+        <span class="stock">04 of 07</span>
       </div>
     </div>
   </article>
@@ -1557,8 +1559,8 @@
       <h3>Lemon<br><em>— gravity study</em></h3>
       <span class="yr">'26</span>
       <div class="meta">
-        <span>Hahnemühle Baryta · 70 × 47 cm</span>
-        <span class="stock">07 of 07</span>
+        <span>Hahnemühle Baryta · 70 x 50cm</span>
+        <span class="stock">05 of 07</span>
       </div>
     </div>
   </article>
@@ -1573,8 +1575,8 @@
       <h3>Coral<br><em>— surface tension</em></h3>
       <span class="yr">'26</span>
       <div class="meta">
-        <span>Hahnemühle Baryta · 70 × 47 cm</span>
-        <span class="stock">07 of 07</span>
+        <span>Hahnemühle Baryta · 70 x 50cm</span>
+        <span class="stock">03 of 07</span>
       </div>
     </div>
   </article>
@@ -1590,7 +1592,7 @@
       <span class="yr">'26</span>
       <div class="meta">
         <span>Hahnemühle Baryta · 53 × 70 cm</span>
-        <span class="stock">07 of 07</span>
+        <span class="stock">06 of 07</span>
       </div>
     </div>
   </article>
@@ -1605,8 +1607,8 @@
       <h3>Orchid<br><em>— soft pool</em></h3>
       <span class="yr">'26</span>
       <div class="meta">
-        <span>Hahnemühle Baryta · 70 × 47 cm</span>
-        <span class="stock">07 of 07</span>
+        <span>Hahnemühle Baryta · 70 x 50cm</span>
+        <span class="stock">05 of 07</span>
       </div>
     </div>
   </article>
@@ -1621,8 +1623,8 @@
       <h3>Vermilion<br><em>— red ground</em></h3>
       <span class="yr">'26</span>
       <div class="meta">
-        <span>Hahnemühle Baryta · 70 × 47 cm</span>
-        <span class="stock">07 of 07</span>
+        <span>Hahnemühle Baryta · 70 x 50cm</span>
+        <span class="stock">04 of 07</span>
       </div>
     </div>
   </article>
@@ -1669,8 +1671,9 @@
     <h3>One <span class="pop">room</span>,<br>six <em>papers,</em><br>the <em>body</em>.</h3>
   </div>
   <div class="right">
-    <p>The studio is a small north-facing room on a quiet street in Neukölln, Berlin. Each plate begins with a single sheet of saturated coloured paper laid flat on the floor — and the body, present, unrehearsed. The trace is offered, not performed.</p>
-    <p>What the camera records is the <em>brief life of a form</em> on a coloured ground — <span class="hl">the artist's varnish,</span> as I have come to call it, glossy at first, then dulling across the afternoon, then slowly returning to the ground. The work is photographed straight, in available daylight, in the first hour.</p>
+    <p>In a practice that resists declaration as much as it courts it, the work unfolds as a quiet negotiation between residue and reverence. <span class="hl">The artist's varnish</span> — applied not with bristle but with the body's own slow vocabulary — settles across coloured paper in constellations that refuse to resolve. These are <em>small traces,</em> deliberate in their reluctance, arrived at over afternoons that stretch and soften the studio into something closer to a sanctuary than a workshop.</p>
+    <p>There is no performance here, only presence. The body, unrehearsed, becomes both subject and instrument, both author and erasure. A single sheet lies flat upon the floor — a horizon, a site, a tacit altar — and the camera waits, patient as a confessor, neither demanding nor turning away. What follows is not gesture so much as gestation: the <em>cathedral wax</em> of the moment pooled and held; the <em>little death's residue</em> catching, briefly, the colour beneath.</p>
+    <p>To witness the photographs that result is to be admitted, however briefly, into a chamber where intimacy and document have forgotten their differences. Nothing is staged; nothing is hidden. The afternoon ends. The varnish dries. The paper, marked and unmarked at once, becomes the only honest record of a moment that resisted being a moment at all.</p>
     <p>Plates are produced as pigment giclée prints on Hahnemühle Photo Rag Baryta, 315 gsm. Hand-numbered, signed in graphite, shipped flat with a letterpress certificate of authenticity. Editions are typically <em>seven plus two artist proofs.</em></p>
   </div>
 </section>
@@ -1689,18 +1692,18 @@
            data-img="photos/plate-I.jpg"
            data-year="2026"
            data-edition="7"
-           data-remaining="7"
+           data-remaining="4"
            data-price="900"
-           data-desc="Plate I · Periwinkle. The opening plate of the cycle. A trace on saturated periwinkle paper. Pigment giclée on Hahnemühle Photo Rag Baryta, 315 gsm. 70 × 47 cm. Edition of 7 + 2 AP." data-stripe-url="https://buy.stripe.com/cNibJ16b18Oh3ru3zg4AU1L">
+           data-desc="Plate I · Periwinkle. The opening plate of the cycle. A trace on saturated periwinkle paper. Pigment giclée on Hahnemühle Photo Rag Baryta, 315 gsm. 70 x 50cm. Edition of 7 + 2 AP." data-stripe-url="https://buy.stripe.com/cNibJ16b18Oh3ru3zg4AU1L">
     <div class="img">
       <span class="ed-tag">Ed. 7</span>
       <picture><source type="image/webp" srcset="photos-web/plate-I.webp"><img src="photos-web/plate-I.jpg" alt="Plate I" width="1500" height="999" decoding="async" loading="lazy"></picture>
     </div>
     <div class="info">
       <h4>P—I<br><em>Periwinkle</em></h4>
-      <div class="specs">Hahnemühle Photo Rag Baryta · 70 × 47 cm</div>
+      <div class="specs">Hahnemühle Photo Rag Baryta · 70 x 50cm</div>
     </div>
-    <div class="stock"><span class="dot"></span>07 of 07 remain</div>
+    <div class="stock"><span class="dot"></span>04 of 07 remain</div>
     <div class="row">
       <span class="price">€900<small>EUR</small></span>
       <a href="mailto:hello@bodyfluid.art?subject=Plate%20I%20%E2%80%94%20Periwinkle" class="acquire">Acquire →</a>
@@ -1714,18 +1717,18 @@
            data-img="photos/plate-II.jpg"
            data-year="2026"
            data-edition="7"
-           data-remaining="7"
+           data-remaining="5"
            data-price="900"
-           data-desc="Plate II · Lemon. A gravity study on saturated lemon-yellow paper — a diagonal arrival meeting its own broken stop. Pigment giclée on Hahnemühle Photo Rag Baryta, 315 gsm. 70 × 47 cm. Edition of 7 + 2 AP." data-stripe-url="https://buy.stripe.com/00w5kD8j9ggJ0fifhY4AU1M">
+           data-desc="Plate II · Lemon. A gravity study on saturated lemon-yellow paper — a diagonal arrival meeting its own broken stop. Pigment giclée on Hahnemühle Photo Rag Baryta, 315 gsm. 70 x 50cm. Edition of 7 + 2 AP." data-stripe-url="https://buy.stripe.com/00w5kD8j9ggJ0fifhY4AU1M">
     <div class="img">
       <span class="ed-tag">Ed. 7</span>
       <picture><source type="image/webp" srcset="photos-web/plate-II.webp"><img src="photos-web/plate-II.jpg" alt="Plate II" width="1500" height="999" decoding="async" loading="lazy"></picture>
     </div>
     <div class="info">
       <h4>P—II<br><em>Lemon</em></h4>
-      <div class="specs">Hahnemühle Photo Rag Baryta · 70 × 47 cm</div>
+      <div class="specs">Hahnemühle Photo Rag Baryta · 70 x 50cm</div>
     </div>
-    <div class="stock"><span class="dot"></span>07 of 07 remain</div>
+    <div class="stock"><span class="dot"></span>05 of 07 remain</div>
     <div class="row">
       <span class="price">€900<small>EUR</small></span>
       <a href="mailto:hello@bodyfluid.art?subject=Plate%20II%20%E2%80%94%20Lemon" class="acquire">Acquire →</a>
@@ -1739,18 +1742,18 @@
            data-img="photos/plate-III.jpg"
            data-year="2026"
            data-edition="7"
-           data-remaining="7"
+           data-remaining="3"
            data-price="900"
-           data-desc="Plate III · Coral. Surface tension on coral-coloured paper — the brief life of a form on a coloured ground. Pigment giclée on Hahnemühle Photo Rag Baryta, 315 gsm. 70 × 47 cm. Edition of 7 + 2 AP." data-stripe-url="https://buy.stripe.com/aFafZhbvl5C5facc5M4AU1N">
+           data-desc="Plate III · Coral. Surface tension on coral-coloured paper — the brief life of a form on a coloured ground. Pigment giclée on Hahnemühle Photo Rag Baryta, 315 gsm. 70 x 50cm. Edition of 7 + 2 AP." data-stripe-url="https://buy.stripe.com/aFafZhbvl5C5facc5M4AU1N">
     <div class="img">
       <span class="ed-tag">Ed. 7</span>
       <picture><source type="image/webp" srcset="photos-web/plate-III.webp"><img src="photos-web/plate-III.jpg" alt="Plate III" width="1500" height="1000" decoding="async" loading="lazy"></picture>
     </div>
     <div class="info">
       <h4>P—III<br><em>Coral</em></h4>
-      <div class="specs">Hahnemühle Photo Rag Baryta · 70 × 47 cm</div>
+      <div class="specs">Hahnemühle Photo Rag Baryta · 70 x 50cm</div>
     </div>
-    <div class="stock"><span class="dot"></span>07 of 07 remain</div>
+    <div class="stock"><span class="dot"></span>03 of 07 remain</div>
     <div class="row">
       <span class="price">€900<small>EUR</small></span>
       <a href="mailto:hello@bodyfluid.art?subject=Plate%20III%20%E2%80%94%20Coral" class="acquire">Acquire →</a>
@@ -1764,7 +1767,7 @@
            data-img="photos/plate-IV.jpg"
            data-year="2026"
            data-edition="7"
-           data-remaining="7"
+           data-remaining="6"
            data-price="900"
            data-desc="Plate IV · Mint. A vertical fall on mint-green paper, photographed from above in available daylight. Pigment giclée on Hahnemühle Photo Rag Baryta, 315 gsm. 53 × 70 cm. Edition of 7 + 2 AP." data-stripe-url="https://buy.stripe.com/bJedR9fLBc0t9PS2vc4AU1O">
     <div class="img">
@@ -1775,7 +1778,7 @@
       <h4>P—IV<br><em>Mint</em></h4>
       <div class="specs">Hahnemühle Photo Rag Baryta · 53 × 70 cm</div>
     </div>
-    <div class="stock"><span class="dot"></span>07 of 07 remain</div>
+    <div class="stock"><span class="dot"></span>06 of 07 remain</div>
     <div class="row">
       <span class="price">€900<small>EUR</small></span>
       <a href="mailto:hello@bodyfluid.art?subject=Plate%20IV%20%E2%80%94%20Mint" class="acquire">Acquire →</a>
@@ -1789,18 +1792,18 @@
            data-img="photos/plate-V.jpg"
            data-year="2026"
            data-edition="7"
-           data-remaining="7"
+           data-remaining="5"
            data-price="900"
-           data-desc="Plate V · Orchid. A soft pool resting on orchid-coloured paper, photographed in available daylight. Pigment giclée on Hahnemühle Photo Rag Baryta, 315 gsm. 70 × 47 cm. Edition of 7 + 2 AP." data-stripe-url="https://buy.stripe.com/7sY28rarh5C5aTW4Dk4AU1P">
+           data-desc="Plate V · Orchid. A soft pool resting on orchid-coloured paper, photographed in available daylight. Pigment giclée on Hahnemühle Photo Rag Baryta, 315 gsm. 70 x 50cm. Edition of 7 + 2 AP." data-stripe-url="https://buy.stripe.com/7sY28rarh5C5aTW4Dk4AU1P">
     <div class="img">
       <span class="ed-tag">Ed. 7</span>
       <picture><source type="image/webp" srcset="photos-web/plate-V.webp"><img src="photos-web/plate-V.jpg" alt="Plate V" width="1500" height="999" decoding="async" loading="lazy"></picture>
     </div>
     <div class="info">
       <h4>P—V<br><em>Orchid</em></h4>
-      <div class="specs">Hahnemühle Photo Rag Baryta · 70 × 47 cm</div>
+      <div class="specs">Hahnemühle Photo Rag Baryta · 70 x 50cm</div>
     </div>
-    <div class="stock"><span class="dot"></span>07 of 07 remain</div>
+    <div class="stock"><span class="dot"></span>05 of 07 remain</div>
     <div class="row">
       <span class="price">€900<small>EUR</small></span>
       <a href="mailto:hello@bodyfluid.art?subject=Plate%20V%20%E2%80%94%20Orchid" class="acquire">Acquire →</a>
@@ -1814,18 +1817,18 @@
            data-img="photos/plate-VI.jpg"
            data-year="2026"
            data-edition="7"
-           data-remaining="7"
+           data-remaining="4"
            data-price="900"
-           data-desc="Plate VI · Vermilion. A study in saturated red — the deepest ground in the cycle, and the loudest. Pigment giclée on Hahnemühle Photo Rag Baryta, 315 gsm. 70 × 47 cm. Edition of 7 + 2 AP." data-stripe-url="https://buy.stripe.com/fZu3cvdDt3tX0fi8TA4AU1Q">
+           data-desc="Plate VI · Vermilion. A study in saturated red — the deepest ground in the cycle, and the loudest. Pigment giclée on Hahnemühle Photo Rag Baryta, 315 gsm. 70 x 50cm. Edition of 7 + 2 AP." data-stripe-url="https://buy.stripe.com/fZu3cvdDt3tX0fi8TA4AU1Q">
     <div class="img">
       <span class="ed-tag">Ed. 7</span>
       <picture><source type="image/webp" srcset="photos-web/plate-VI.webp"><img src="photos-web/plate-VI.jpg" alt="Plate VI" width="1500" height="999" decoding="async" loading="lazy"></picture>
     </div>
     <div class="info">
       <h4>P—VI<br><em>Vermilion</em></h4>
-      <div class="specs">Hahnemühle Photo Rag Baryta · 70 × 47 cm</div>
+      <div class="specs">Hahnemühle Photo Rag Baryta · 70 x 50cm</div>
     </div>
-    <div class="stock"><span class="dot"></span>07 of 07 remain</div>
+    <div class="stock"><span class="dot"></span>04 of 07 remain</div>
     <div class="row">
       <span class="price">€900<small>EUR</small></span>
       <a href="mailto:hello@bodyfluid.art?subject=Plate%20VI%20%E2%80%94%20Vermilion" class="acquire">Acquire →</a>
