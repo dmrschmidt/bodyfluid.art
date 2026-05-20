@@ -1180,6 +1180,8 @@
     .prints .ed { border-right: 0; border-bottom: 2px solid var(--ink); }
     .prints .ed:nth-child(-n+3) { border-bottom: 2px solid var(--ink); }
     .prints .ed:last-child { border-bottom: 0; }
+    .prints .ed .row { grid-template-columns: 1fr; gap: 14px; }
+    .prints .ed .row .acquire { text-align: center; padding: 14px 18px; }
 
     .journal .row { grid-template-columns: 60px 1fr 40px; }
     .journal .row .date { display: none; }
