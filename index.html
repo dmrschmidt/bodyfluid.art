@@ -1005,8 +1005,10 @@
     color: var(--ink);
     border: 2px solid var(--ink);
     padding: 0 0.08em 0.04em;
-    transform: rotate(-2deg);
-    box-shadow: 10px 10px 0 var(--ink);
+    transform: rotate(-2deg) translateZ(0);
+    box-shadow: 10px 10px 0 0.5px var(--ink);
+    will-change: transform;
+    backface-visibility: hidden;
   }
   .contact .grid {
     display: grid;
