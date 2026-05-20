@@ -1163,7 +1163,14 @@
     .hero-strip .cell:last-child { border-bottom: 0; }
 
     .hero-feat { grid-template-columns: 1fr; }
-    .hero-feat .img-wrap { border-right: 0; border-bottom: 2px solid var(--ink); }
+    .hero-feat .img-wrap { border-right: 0; border-bottom: 2px solid var(--ink); aspect-ratio: 3/2; }
+
+    /* Pull the featured plate above the swatch strip on mobile so the
+       image lands above the fold. */
+    .hero { display: flex; flex-direction: column; }
+    .hero .hero-type  { order: 1; }
+    .hero .hero-feat  { order: 2; }
+    .hero .hero-strip { order: 3; border-bottom: 0; }
 
     .sec-head { grid-template-columns: auto 1fr; }
     .sec-head .num { font-size: 36px; padding: 16px 12px; }
@@ -1529,7 +1536,7 @@
 
   <div class="hero-feat">
     <div class="img-wrap">
-      <picture><source type="image/webp" srcset="photos-web/plate-I.webp"><img src="photos-web/plate-I.jpg" alt="Plate I" width="1500" height="999" decoding="async" loading="lazy" fetchpriority="high"></picture>
+      <picture><source type="image/webp" srcset="photos-web/plate-I.webp"><img src="photos-web/plate-I.jpg" alt="Plate I" width="1500" height="999" decoding="async" loading="eager" fetchpriority="high"></picture>
       <span class="pin"><em>plate</em>I · PERIWINKLE</span>
     </div>
     <div class="side">
